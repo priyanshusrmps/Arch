@@ -1,0 +1,70 @@
+@import 'color/monalisa.css';
+
+*{
+    border: none;
+    border-radius: 0px;
+
+    font-family: "JetBrainsMono Nerd Font Propo", "sans-serif";
+    font-weight: bold;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+window#waybar {
+    background: @bg0 ;
+}
+
+#workspaces {
+    margin: 0 0 0 5;
+}
+
+#workspaces button {
+    padding: 0 10;
+    /* border-radius: 10; */
+    margin: 0;
+    background-color: @fg;
+    color: @bg0;
+    font-size: 12;
+}
+
+#workspaces button.active{
+    background-color: @fg1;
+    color: rgba(256,256,256,.8);
+    font-size: 14;
+}
+
+#workspaces button:hover{
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: @bg0 ;
+    color: @fg;
+    font-size: 14;
+    transition: all 0.2s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+}
+
+#workspaces button.active:hover{
+    background-color: @fg1 ;
+    color: rgba(256,256,256,.8);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#mpd, #pulseaudio, #network, #cpu, #memory, #temperature, #clock, #window, #custom-notification {
+    padding: 0 15;   
+    /* border-radius: 30; */
+    margin: 0 5 0 5;
+    background-color: @fg1;
+    color: rgba(256,256,256,.8);
+}
+
+#clock{
+    margin-left: 10;
+}
+
+#custom-notification{
+    margin-right: 10;
+}
